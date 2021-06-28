@@ -1,0 +1,11 @@
+{
+    "configuration": "cpu=atmega328",
+    "board": "arduino:avr:nano",
+    "programmer": "arduino:avrisp",
+    "port": "COM5",
+    "sketch": "main.ino",
+    "output": "bin/build-logs",
+    "intelliSenseGen": "global",
+    "prebuild": "IF \"%VSCA_BUILD_MODE%\"==\"Verifying\" (echo VSCA_BUILD_MODE=%VSCA_BUILD_MODE% && echo VSCA_BOARD=%VSCA_BOARD% && echo VSCA_SERIAL=%VSCA_SERIAL%)",
+    "postbuild": "cd %VSCA_BUILD_DIR% && (avr-objdump -D -S main.ino.elf > main.ino.s)"
+}

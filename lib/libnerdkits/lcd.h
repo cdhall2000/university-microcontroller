@@ -1,4 +1,4 @@
-//#ifndef __LCD_H
+#ifndef __LCD_H
 #define __LCD_H
 
 void lcd_set_type_data();
