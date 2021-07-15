@@ -226,7 +226,7 @@ void set_global_notes(void) {
         Calculating the OCRA value for notes C4-B4 using the MPU_CPU value
      */
     float notes[] = {261.63, 293.66, 329.63, 349.23, 392.00, 440, 493.88}; //Array of our note frequencies
-    uint8_t* keys[] = {&NOT E_C4, &NOTE_D4, &NOTE_E4, &NOTE_F4, &NOTE_G4, &NOTE_A4, &NOTE_B4}; //Pointer array of our note OCRA values
+    uint8_t* keys[] = {&NOTE_C4, &NOTE_D4, &NOTE_E4, &NOTE_F4, &NOTE_G4, &NOTE_A4, &NOTE_B4}; //Pointer array of our note OCRA values
     for (int i = 0; i < (sizeof(notes)/sizeof(notes[i])); i++) {
         double first_holder = (((MPU_CPU/notes[i])/512)-1); //Calculate OCRA value
         double resultant = round(first_holder); //Round OCRA value
