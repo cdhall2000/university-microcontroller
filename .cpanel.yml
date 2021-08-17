@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/frm2x2qhjc8z/public_html/
+    - cp main.cpp $DEPLOYPATH
+    - cp main.ino $DEPLOYPATH
+    
+...
